@@ -88,10 +88,15 @@ class DurationUtilTest extends TestCase
             [7200, false, ['h', 'm'], '2 hours'],
 
             // Custom units
-            [93784, true, ['h', 'm'], '26h 3m'],
-            [93784, true, ['d', 'h', 'm'], '1d 2h 3m'],
+            [93784, true, ['h', 'm'], '26h 3.0666666666667m'],
+            [93784, true, ['d', 'h', 'm'], '1d 2h 3.0666666666667m'],
             [604800, true, ['w'], '1w'],
             [86400, true, ['d'], '1d'],
+
+            // Decimal handling for last unit
+            [90, true, ['m'], '1.5m'],
+            [90, false, ['m'], '1.5 minutes'],
+            [3690, true, ['h', 'm'], '1h 1.5m'],
 
             // Edge cases
             [1, true, ['s'], '1s'],

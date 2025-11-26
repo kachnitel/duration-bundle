@@ -124,8 +124,8 @@ class DurationUtil
         foreach ($unitConfig as $unit => $config) {
             $value = $seconds / $config['seconds'];
 
-            // Always round down for clean display
-            if ($value > 0) {
+            // If not the smallest unit, round down. For the smallest unit, keep decimals if present
+            if ($value > 0 && $unit !== array_key_last($unitConfig)) {
                 $value = floor($value);
             }
 
