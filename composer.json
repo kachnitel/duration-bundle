@@ -1,0 +1,41 @@
+{
+    "name": "kachnitel/duration-bundle",
+    "type": "symfony-bundle",
+    "description": "A Symfony bundle for handling duration parsing, formatting, and form integration. Parse human-readable duration strings (2h 30m, HH:MM:SS) and format seconds into readable formats.",
+    "keywords": [
+        "symfony",
+        "duration",
+        "time",
+        "interval",
+        "form",
+        "twig"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petr Kachna",
+            "email": "kachna@pm.me"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "symfony/form": "^6.4|^7.0",
+        "symfony/twig-bundle": "^6.4|^7.0",
+        "twig/twig": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0",
+        "symfony/phpunit-bridge": "^6.4|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kachnitel\\DurationBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kachnitel\\DurationBundle\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable"
+}

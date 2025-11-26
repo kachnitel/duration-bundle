@@ -1,0 +1,16 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    # Service for duration utilities
+    Kachnitel\DurationBundle\Service\DurationUtil:
+        public: true
+
+    # Form type - auto-discovered by Symfony
+    Kachnitel\DurationBundle\Form\Type\DurationType:
+        tags: ['form.type']
+
+    # Twig extension - auto-configured by Symfony
+    Kachnitel\DurationBundle\Twig\Extension\DurationExtension:
+        tags: ['twig.extension']
