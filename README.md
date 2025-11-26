@@ -254,7 +254,7 @@ This bundle is released under the MIT License. See the [LICENSE](LICENSE) file f
 
 ## Credits
 
-Developed by [Petr Kachna](https://github.com/kachnitel)
+Developed by [Mr. Duck](https://github.com/kachnitel)
 
 Extracted from production code and open-sourced for the Symfony community.
 
